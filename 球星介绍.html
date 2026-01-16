@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>金州勇士球星</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    /* 基本样式 */
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+
+    
+
+    /* 上边框背景设计 */
+    header {
+        width: 1580px;
+      height: 60px;
+      background-image: url('勇士/004.jpg'); /* 替换为你想要的背景图片 */
+      background-size: cover;
+      background-position: center;
+      padding: 30px 0;
+      text-align: center;
+      color: white;
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      width: 100%;
+    }
+
+    /* 下边框背景设计 */
+    .footer {
+        width: 1580px;
+      height: 60px;
+      background-image: url('勇士/019.jpg'); /* 替换为你想要的背景图片 */
+      background-size: cover;
+      background-position: center;
+      padding: 30px 0;
+      text-align: center;
+      color: white;
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      z-index: 100;
+    }
+
+    /* 简洁高端背景 */
+    body {
+      background: linear-gradient(to right, #e0e0e0, #ffffff); /* 简单的渐变背景 */
+      color: white;
+      flex-grow: 1;
+    }
+
+    /* 球员图片区域 */
+    .players-section {
+      display: flex;
+      justify-content: space-evenly;
+      
+      gap: 30px;
+     
+      flex-grow: 1;
+    }
+
+    .player {
+      position: relative;
+      width: 350px;
+      height: 550px;
+      cursor: pointer;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+      margin-top: 80px;  /* 调整上边距 */
+    }
+
+    .player:hover {
+      transform: scale(1.1);
+    }
+
+    .player img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 15px;
+    }
+
+    .player-name {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: white;
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    }
+
+    /* 模态框样式 */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      padding: 20px;
+    }
+
+    .modal-content {
+      background-color: white;
+      padding: 50px;
+      border-radius: 10px;
+      max-width: 800px;
+      width: 100%;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
+
+    .modal-content img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    .modal-content h2 {
+      font-size: 2.5rem;
+      color: #003b6f;
+      margin-bottom: 20px;
+    }
+
+    .modal-content p {
+      font-size: 1.2rem;
+      color: #333;
+      line-height: 1.6;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1></h1>
+  </header>
+
+  
+  <div class="players-section">
+    <div class="player" onclick="openModal('curry')">
+      <img src="C:\Users\86137\Desktop\广东第二师范学院\大三上学期\网页设计\大作业1\勇士\007.jpg" alt="库里">
+      <div class="player-name">斯蒂芬·库里</div>
+    </div>
+    <div class="player" onclick="openModal('thompson')">
+      <img src="C:\Users\86137\Desktop\广东第二师范学院\大三上学期\网页设计\大作业1\勇士\008.jpg" alt="汤普森">
+      <div class="player-name">克雷·汤普森</div>
+    </div>
+    <div class="player" onclick="openModal('green')">
+      <img src="C:\Users\86137\Desktop\广东第二师范学院\大三上学期\网页设计\大作业1\勇士\009.jpg" alt="格林">
+      <div class="player-name">德雷蒙德·格林</div>
+    </div>
+    <div class="player" onclick="openModal('wiggins')">
+      <img src="C:\Users\86137\Desktop\广东第二师范学院\大三上学期\网页设计\大作业1\勇士\010.jpg" alt="维金斯">
+      <div class="player-name">安德鲁·维金斯</div>
+    </div>
+  </div>
+
+  <!-- 模态框 -->
+  <div id="modal" class="modal" onclick="closeModal(event)">
+    <div class="modal-content" onclick="event.stopPropagation()"> <!-- 防止点击内容区域关闭模态框 -->
+      <img id="modal-image" src="" alt="球员">
+      <h2 id="modal-title">球员名称</h2>
+      <p id="modal-content">球员成就内容</p>
+    </div>
+  </div>
+
+  <!-- 下边框 -->
+  <div class="footer">
+    
+  </div>
+
+  <script>
+    function openModal(player) {
+      // 根据点击的球员设置模态框内容
+      const modal = document.getElementById('modal');
+      const title = document.getElementById('modal-title');
+      const content = document.getElementById('modal-content');
+      const modalImage = document.getElementById('modal-image');
+
+      if (player === 'curry') {
+        title.textContent = "斯蒂芬·库里";
+        content.innerHTML = `
+          <strong>生涯成就:</strong><br>
+          - 4次NBA冠军 (2015, 2017, 2018,2022)<br>
+          - 2次MVP-NBA最有价值球员 (2015, 2016)、1次FMVP<br>
+          - NBA历史三分王<br>
+          - 全明星入选6次
+        `;
+        modalImage.src = '勇士/011.jpg';
+      } else if (player === 'thompson') {
+        title.textContent = "克雷·汤普森";
+        content.innerHTML = `
+          <strong>生涯成就:</strong><br>
+          - 4次NBA冠军 (2015, 2017, 2018,2022)<br>
+          - 5次NBA全明星<br>
+          - NBA历史单场三分命中纪录保持者-单场命中14记三分<br>
+          - NBA最佳防守球员阵容
+        `;
+        modalImage.src = '勇士/012.jpg';
+      } else if (player === 'green') {
+        title.textContent = "德雷蒙德·格林";
+        content.innerHTML = `
+          <strong>生涯成就:</strong><br>
+          - 4次NBA冠军 (2015, 2017, 2018.2022)<br>
+          - NBA最佳防守球员 (2017)<br>
+          - 3次NBA最佳防守阵容第一队、NBA全明星 (2016, 2017, 2018)
+        `;
+        modalImage.src = '勇士/014.jpg';
+      } else if (player === 'wiggins') {
+        title.textContent = "安德鲁·维金斯";
+        content.innerHTML = `
+          <strong>生涯成就:</strong><br>
+          - 1次NBA冠军 (2022)<br>
+          - NBA全明星 (2022)<br>
+          - 2020年NBA最佳防守球员阵容
+        `;
+        modalImage.src = '勇士/013.jpg';
+      }
+
+      // 显示模态框
+      modal.style.display = 'flex';
+    }
+
+    function closeModal(event) {
+      // 关闭模态框
+      const modal = document.getElementById('modal');
+      // 确保点击的是模态框的外部区域
+      if (event.target === modal) {
+        modal.style.display = 'none';
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="勇士队2022年夺冠">
+    <meta name="keywords" content="勇士队, NBA, 2022年总冠军, 斯蒂芬·库里, 总决赛MVP">
+    <title>勇士队2022年夺冠</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+
+
+        /* 设置背景图片 */
+        .background {
+            width: 100%;
+            height: 90vh;
+            background-image: url('images/warriors_2022_championship.jpg'); /* 替换为你的图片路径 */
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* 轮播容器：控制轮播大小 */
+        .carousel-container {
+            position: relative;
+            width: 80%; /* 控制轮播的宽度 */
+            height: 900px; /* 控制轮播的高度 */
+            margin: 50px auto;
+            overflow: hidden;
+            border-radius: 10px; /* 可选：使轮播容器有圆角 */
+        }
+
+        /* 轮播内容 */
+        .carousel-images {
+            display: flex;
+            transition: transform 1s ease-in-out;
+        }
+
+        /* 每张图片：控制图片如何适应容器 */
+        .carousel-images img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* 保持图片比例，裁剪多余部分填充容器 */
+        }
+
+        /* 轮播按钮 */
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 30px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+    
+
+       /* 右上角的注册登录链接 */
+       .auth-links {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .auth-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            padding: 5px 10px;
+            background-color: #333;
+            border-radius: 5px;
+        }
+
+        .auth-links a:hover {
+            background-color: #575757;
+        }
+
+        /* 注册和登录表单样式 */
+        .auth-form {
+            width: 300px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .auth-form input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .auth-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .auth-form button:hover {
+            background-color: #575757;
+        }
+
+        
+
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #f3b407;
+            color:#294756;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        nav a:hover {
+            background-color: #575757;
+            border-radius: 5px;
+        }
+
+        
+        
+        
+        .footer {
+            background-color: #0e2a47;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            
+        }
+
+        .footer a {
+            color: #ffcc00;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    
+<!-- 注册和登录链接 -->
+<div class="auth-links">
+    <a href="注册.html">注册</a>
+    <a href="登陆.html">登录</a>
+</div>
+
+  <!-- 登录页面 (login.html) -->
+  <div id="loginPage" style="display:none;">
+    <h2>登录</h2>
+    <form onsubmit="return validateLogin()">
+        <input type="text" id="username" placeholder="用户名" required>
+        <input type="password" id="password" placeholder="密码" required>
+        <button type="submit">登录</button>
+    </form>
+</div>
+
+
+
+    <header>
+        <h1>Warriors  NBA champion 2022 </h1>
+    </header>
+
+    <nav>
+        <a href="#">首页</a>
+    
+        <a href="球队介绍.html">赛季回顾</a>
+        <a href="球星介绍.html">球星介绍</a>
+        <a href=总决赛回顾.html>总决赛回顾</a>
+       
+    </nav>
+    <div class="content"  >
+        <div>
+            <p style="text-align: center;   font-size: 20px "><strong>勇士队成功夺得2022年NBA总冠军！</strong></p>
+            <p style="text-align: center;   font-size: 20px">
+                2022年NBA总决赛，金州勇士对战波士顿凯尔特人，最终斯蒂芬·库里带领勇士以4-2的战绩夺得了队史第7个总冠军，获得个人生涯第四个冠军
+            和首个总决赛MVP。</p>
+        </div>
+       
+    </div>
+    <div class="background">
+        <!-- 图片轮播 -->
+        <div class="carousel-container">
+            <div class="carousel-images">
+                <img src="C:\Users\86137\Desktop\大作业1\勇士3\001.jpg" alt="勇士队夺冠1">
+                
+                <img src="C:\Users\86137\Desktop\大作业1\勇士3\R-C.jpg" alt="勇士队夺冠3">
+                <img src="C:\Users\86137\Desktop\大作业1\勇士3\v2-c552f5c4d7e3b5ccbbc09af7422a08fe_b.jpg" alt="勇士队夺冠4">
+                <img src="C:\Users\86137\Desktop\大作业1\勇士3\202206171620047208.jpg" alt="勇士队夺冠5">
+                <img src="C:\Users\86137\Desktop\大作业1\勇士3\R-C (3).jpg" alt="勇士队夺冠6">
+                <img src="C:\Users\86137\Desktop\大作业1\勇士3\OIP-C.jpg" alt="勇士队夺冠6">
+                
+                
+            </div>
+            <span class="prev">&#10094;</span>
+            <span class="next">&#10095;</span>
+        </div>
+    </div>
+
+    <script>
+        // 获取轮播相关元素
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.carousel-images img');
+        const totalImages = images.length;
+        const carouselImages = document.querySelector('.carousel-images');
+        const prevButton = document.querySelector('.prev');
+        const nextButton = document.querySelector('.next');
+
+        // 下一张图片
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % totalImages;
+            updateCarousel();
+        }
+
+        // 上一张图片
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+            updateCarousel();
+        }
+
+        // 更新轮播内容
+        function updateCarousel() {
+            carouselImages.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+
+        // 添加按钮点击事件
+        nextButton.addEventListener('click', nextSlide);
+        prevButton.addEventListener('click', prevSlide);
+
+        // 自动切换
+
+
+          // 登录验证
+          function validateLogin() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            if (username === 'webdesign' && password === '123456') {
+                alert('登录成功');
+                return false;  // 阻止表单提交
+            } else {
+                alert('登录失败');
+                return false;  // 阻止表单提交
+            }
+        }
+
+
+    </script>
+
+
+    
+
+    <div class="footer">
+        <p>&copy; 勇士队2022年夺冠. All Rights Reserved.</p>
+        
+    </div>
+</body>
+
+</html>

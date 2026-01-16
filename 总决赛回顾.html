@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+
+        header {
+            height: 20px;
+            background-color: #040404;
+            color: white;
+            padding: 20px 0;
+            text-align: center; /* 这将确保所有块级子元素内的内联内容居中 */
+            transition: background-color 0.3s ease;
+            width: 100%;
+        }
+
+        .logo {
+            display: flex; /* 设置为弹性盒子容器 */
+            justify-content: center; /* 水平居中子元素 */
+            align-items: center; /* 垂直居中子元素（如果.logo有额外的高度） */
+            height: 100%; /* 确保.logo填满header的高度 */
+        }
+
+        .logo h1 {
+            font-size: 2.5em;
+            font-weight: bold;
+            /* text-align: center; 这行可以移除，因为header已经设置了 */
+        }
+
+        .container {
+        display: flex;
+        justify-content: center; /* 水平居中 */}
+        
+
+        .section-img {
+        margin: 0 2px; /* 图片之间的间距，根据需要调整 */
+       
+        height: auto; /* 保持图片的纵横比 */
+    }
+
+    
+    .video{
+    display: flex;
+   
+    
+    margin-top: 10px;
+    background: #000;
+   
+    
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>总决赛回顾</h1>
+        </div>
+    </header>
+    
+    <div class="container">
+    <!-- 插入图片 -->
+     <img src="C:\Users\86137\Desktop\大作业1\勇士19\5ec070b7ca3dd87054c79a90a52c5f8.jpg" class="section-img"  >
+     <img src="C:\Users\86137\Desktop\大作业1\勇士19\d9d86c2aabf988a7454f83f0def3451.jpg" class="section-img">
+     <img src="C:\Users\86137\Desktop\大作业1\勇士19\7d5efbedfc4fa6235605d3c3d20cd6d.jpg" class="section-img">
+    </div>
+    
+    
+<div class="video">
+    <h1 >G1,100-98</h1>
+    <video width="1300" height="580" controls  margin-left: 220px;>
+        <source src="C:\Users\86137\Videos\kalvin_tool_kalvin_tool_37769a2d9a4e463186f4f2a3752e7b11 (1) (1).mp4" type="video/mp4">
+        您的浏览器不支持 HTML5 视频。
+      </video>
+</div>
+
+</body>
+</html>
